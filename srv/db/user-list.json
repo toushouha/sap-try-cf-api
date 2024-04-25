@@ -1,0 +1,20 @@
+{
+  "Shinya Araki": {
+    "ID": 100,
+    "name": "Shinya Araki",
+    "email": "shinya.araki@akkodis.co.jp",
+    "Role": 1
+  },
+  "Ryo Miyakoshi": {
+    "ID": 101,
+    "name": "Ryo Miyakoshi",
+    "email": "ryo.miyakoshi@akkodis.co.jp",
+    "Role": 2
+  },
+  "Takumi Nakagawa": {
+    "ID": 102,
+    "name": "Takumi Nakagawa",
+    "email": "takumi.nakagawa@akkodis.co.jp",
+    "Role": 3
+  }
+}

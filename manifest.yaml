@@ -1,0 +1,32 @@
+applications:
+  # Application
+  - name: management-system
+    instance: 1
+    path: srv
+    routes:
+      - route: management.cfapps.us10-001.hana.ondemand.com
+    memory: 128M
+    timeout: 180
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - xsuaa-management-list
+  #Approuter
+  - name: approuter-management
+    path: approuter
+    routes:
+      - route: approuter-management.cfapps.us10-001.hana.ondemand.com
+    memory: 128M
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - xsuaa-management-list
+    env:
+      destinations: >
+        [
+          {
+            "name": "management-dest",
+            "url":  "https://management.cfapps.us10-001.hana.ondemand.com",
+            "forwardAuthToken": true
+          }
+        ]

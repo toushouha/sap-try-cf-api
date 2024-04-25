@@ -1,0 +1,31 @@
+{
+  "xsappname": "management-system",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.read",
+      "description": "Role to read data"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "viewer",
+      "description": "Viewer Role",
+      "scope-references": ["$XSAPPNAME.read"]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "managementReadRoleCollections",
+      "description": "Management Role Collection",
+      "role-template-references": ["$XSAPPNAME.viewer"]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://api.cf.us10-001.hana.ondemand.com/**",
+      "https://*.hana.ondemand.com/**",
+      "https://*.cfapps.us10-001.hana.ondemand.com/**"
+    ]
+  }
+}

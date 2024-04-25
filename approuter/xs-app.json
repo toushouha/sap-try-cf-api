@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "source": "^/management",
+      "target": "/",
+      "destination": "management-dest"
+    }
+  ]
+}
